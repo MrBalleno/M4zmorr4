@@ -3,10 +3,10 @@ import time
 from os import system
 system("title KUKORO - MAZMORRA")
 
-Canales = ['Tu_Canal'] # <-------- Canal o Canales donde se va a conectar ['canal1','canal2']
-Administradores = ['Tu_Usuario'] # <----- Usuario y/o Usuarios quienes podran usar el bot ['usuario1','usuario2']
-Comando = '#angel' # <---- Comando o Mensaje  al cual respondera el bot
-TokenTwitch = 'oauth:abcdefghijklmnopqrstuvwxyz' # <----- Oauth (Bot) (https://twitchapps.com/tmi/)
+Canales = ['tm_ballenocr'] # <-------- Canal o Canales donde se va a conectar ['canal1','canal2']
+Administradores = ['tm_ballenocr'] # <----- Usuario y/o Usuarios quienes podran usar el bot ['usuario1','usuario2']
+Comando = '#dino' # <---- Comando o Mensaje  al cual respondera el bot
+TokenTwitch = 'oauth:0fkx7b61e09frmk1qs201ildy6fxzl' # <----- Oauth (Bot) (https://twitchapps.com/tmi/)
 
 class Bot(commands.Bot):
     def __init__(self):         
