@@ -3,10 +3,10 @@ import time
 from os import system
 system("title KUKORO - MAZMORRA")
 
-Canales = ['Tu_Canal'] # <-------- Canal o Canales donde se va a conectar ['canal1','canal2']
-Administradores = ['Tu_Usuario'] # <----- Usuario y/o Usuarios quienes podran usar el bot ['usuario1','usuario2']
-Comando = '#angel' # <---- Comando o Mensaje  al cual respondera el bot
-TokenTwitch = 'oauth:abcdefghijklmnopqrstuvwxyz' # <----- Oauth (Bot) (https://twitchapps.com/tmi/)
+Canales = ['CANAL']
+Administradores = ['ADMINISTRADOR'] 
+Comando = 'COMANDO'
+TokenTwitch = 'TOKEN'
 
 class Bot(commands.Bot):
     def __init__(self):         
@@ -25,16 +25,10 @@ class Bot(commands.Bot):
 
         if(Administradores.__contains__(ctx.author.name)):
             if(Mensaje.lower() == Comando.lower()):  
-                await ctx.channel.send('!kukoro_O')
-                time.sleep(3)
-                await ctx.channel.send('!getinfO_o')  
+                await ctx.channel.send('!kukoro')
+                time.sleep(2)
+                await ctx.channel.send('!getinfo')  
                 print(f'\x1b[3;36m --> Invocado por {ctx.author.name} en {Canal}\x1b[0;m')    
                          
 bot = Bot()
 bot.run()
-
-################################# MIG3L_0N ##########################################
-#01 ---> Descargar e Instalar Python (https://www.python.org/downloads/).
-#02 ---> Abrir CMD y ejecutar (pip install twitchio) para instalar las dependencias.
-
-# ---> Ten en cuenta que algunos canales permiten seguir para poder escribir en el chat.
