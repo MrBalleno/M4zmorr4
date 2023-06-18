@@ -3,6 +3,7 @@ import time
 from os import system
 system("title KUKORO - MAZMORRA")
 
+# REEMPLAZAR POR TUS DATOS
 Canales = ['CANAL']
 Administradores = ['ADMINISTRADOR'] 
 Comando = 'COMANDO'
@@ -10,7 +11,7 @@ TokenTwitch = 'TOKEN'
 
 class Bot(commands.Bot):
     def __init__(self):         
-        super().__init__(token = TokenTwitch, prefix = '_', initial_channels = Canales)
+        super().__init__(token = TokenTwitch, prefix = '_0n', initial_channels = Canales)
 
     async def event_ready(self):   
         print(f'\x1b[3;35m --> {self.nick.capitalize()}\x1b[3;32m conectado a {Canales}\x1b[0;m')  
@@ -22,13 +23,11 @@ class Bot(commands.Bot):
             return
         Canal = (f'{ctx.channel}').replace('<Channel name: ','').replace('>','')
         Mensaje = f'{ctx.content}'
-
         if(Administradores.__contains__(ctx.author.name)):
             if(Mensaje.lower() == Comando.lower()):  
                 await ctx.channel.send('!kukoro')
                 time.sleep(2)
                 await ctx.channel.send('!getinfo')  
-                print(f'\x1b[3;36m --> Invocado por {ctx.author.name} en {Canal}\x1b[0;m')    
-                         
+                print(f'\x1b[3;36m --> Invocado por {ctx.author.name} en {Canal}\x1b[0;m')                            
 bot = Bot()
 bot.run()
