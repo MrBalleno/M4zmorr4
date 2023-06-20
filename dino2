@@ -11,11 +11,11 @@ TokenTwitch = 'TOKEN'
 
 class Bot(commands.Bot):
     def __init__(self):         
-        super().__init__(token = oauth:0fkx7b61e09frmk1qs201ildy6fxzl, prefix = '_0n', initial_channels = tm_ballenocr,brasitos10,bro_paper)
+        super().__init__(token = oauth:0fkx7b61e09frmk1qs201ildy6fxzl, prefix = '_0n', initial_channels = tm_ballenocr, brasitos10, bro_paper)
 
     async def event_ready(self):   
-        print(f'\x1b[3;35m --> {self.nick.capitalize()}\x1b[3;32m conectado a {tm_ballenocr,brasitos10,bro_paper}\x1b[0;m')  
-        print(f'\x1b[3;35m --> Administradores: \x1b[3;37m{tm_ballenocr,brasitos10,bro_paper}\x1b[0;m')  
+        print(f'\x1b[3;35m --> {self.nick.capitalize()}\x1b[3;32m conectado a {tm_ballenocr, brasitos10, bro_paper}\x1b[0;m')  
+        print(f'\x1b[3;35m --> Administradores: \x1b[3;37m{tm_ballenocr, brasitos10, bro_paper}\x1b[0;m')  
         print(f'\x1b[3;33m --> {#dino}\x1b[3;34m para invocarlo') 
 
     async def event_message(self, ctx):
